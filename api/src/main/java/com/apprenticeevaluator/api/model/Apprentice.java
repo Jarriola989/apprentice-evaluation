@@ -1,25 +1,51 @@
 package com.apprenticeevaluator.api.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "apprentice")
 public class Apprentice {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Integer id;
+    @Column(name="full_name")
     private String fullName;
+    @Column(name="email")
     private String email;
+    @Column(name="project_repo")
     private String projectRepo;
+    @Column(name="project_url")
     private String projectUrl;
+    @Column(name="best_practice_oop")
     private int bestPracticeOop;
+    @Column(name="modular_dev")
     private int modularDev;
+    @Column(name="full_stack")
     private int fullStack;
+    @Column(name="testing")
     private int testing;
+    @Column(name="database")
     private int database;
+    @Column(name="debugging")
     private int debugging;
+    @Column(name="problem_solving")
     private int problemSolving;
+    @Column(name="javascript")
     private int javascript;
+    @Column(name="html")
     private int html;
+    @Column(name="css")
     private int css;
+    @Column(name="teamwork")
     private int teamwork;
+    @Column(name="self_motivation")
     private int selfMotivation;
+    @Column(name="communication")
     private int communication;
+    @Column(name="energy")
     private int energy;
+    @Column(name="intelligence_aptitude")
     private int intelligenceAptitude;
 
     public Apprentice(String fullName, String email, String projectRepo, String projectUrl, int bestPracticeOop, int modularDev, int fullStack, int testing, int database, int debugging, int problemSolving, int javascript, int html, int css, int teamwork, int selfMotivation, int communication, int energy, int intelligenceAptitude) {
@@ -68,10 +94,6 @@ public class Apprentice {
 
     public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getFullName() {
