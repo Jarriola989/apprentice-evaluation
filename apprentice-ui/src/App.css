@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'Museo Sans';
+  src: url(fonts/museo.ttf);
+  font-weight: 500; 
+}
+
+.App {
+  text-align: center;
+  background-color: rgb(35, 74, 93);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+}
+
+.form-box{
+  background-color: rgb(77,105,141);
+  width: 400px;
+  color: rgb(233,252,227);
+  font-family: 'Museo Sans';
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 2px;
+  padding: 30px;
+  position: absolute;
+  right: 40%;
+  left: 37%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.input-box{
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(233,252,227);
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-family: 'Museo Sans';
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgb(35, 74, 93);
+}
+
+::placeholder{
+  color: rgb(94, 154, 160);
+}
+
+.traits{
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.trait-box{
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(233,252,227);
+  width: 50px;
+  right: 40px;
+  position: absolute;
+  padding: 5px;
+  color: rgb(35, 74, 93);
+}
+
+.submit-btn{
+  background-color: rgb(227,102,109);
+  color: rgb(233,252,227);
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
