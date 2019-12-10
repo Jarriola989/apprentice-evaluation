@@ -2,14 +2,49 @@ import React, { Component } from 'react';
 import '../App.css';
 
 class Form extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            fullName: "",
+            email: "",
+            projectRepo: "",
+            projectUrl: "",
+            bestPracticeOop: 0,
+            modularDev: 0,
+            fullStack: 0,
+            testing: 0,
+            database: 0,
+            debugging: 0,
+            problemSolving: 0,
+            javascript: 0,
+            html: 0,
+            css: 0,
+            teamwork: 0,
+            selfMotivation: 0,
+            communication: 0,
+            energy: 0,
+            intelligenceAptitude: 0
+        };
+    }
+    
+    handleChange = (e) => {
+        this.setState({
+            [e.target.id]: e.target.value
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     render(){
         return(
-            <div className="form-box">
+            <form onSubmit={this.handleSubmit} className="form-box">
                 
                     <input id="fullName" type="text" placeholder="FULL NAME" className="input-box"/>
-                    <input id="fullName" type="text" placeholder="EMAIL" className="input-box"/>
-                    <input id="fullName" type="text" placeholder="PROJECT REPO" className="input-box"/>
-                    <input id="fullName" type="text" placeholder="PROJECT URL" className="input-box"/>
+                    <input id="email" type="email" placeholder="EMAIL" className="input-box"/>
+                    <input id="projectRepo" type="text" placeholder="PROJECT REPO" className="input-box"/>
+                    <input id="projectUrl" type="text" placeholder="PROJECT URL" className="input-box"/>
                     <div className="traits">
                         <label>USING BEST PRACTICES FOR OOP:</label>
                         <input id="bestPracticeOop" type="number" className="trait-box"/>
@@ -56,7 +91,7 @@ class Form extends Component{
                     </div>
                     <div className="traits">
                         <label>SELF MOTIVATION:</label>
-                        <input id="htselfMotivationnl" type="number" className="trait-box"/>
+                        <input id="selfMotivation" type="number" className="trait-box"/>
                     </div>
                     <div className="traits">
                         <label>COMMUNICATION SKILLS:</label>
@@ -70,9 +105,9 @@ class Form extends Component{
                         <label>INTELLIGENCE / APTITUDE:</label>
                         <input id="intelligenceAptitude" type="number" className="trait-box"/>
                     </div>
-                    <button className="submit-btn">SUBMIT</button>
+                    <button type="submit" className="submit-btn">SUBMIT</button>
                 
-            </div>
+            </form>
         );
     }
 }
