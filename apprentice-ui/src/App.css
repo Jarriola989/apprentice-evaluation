@@ -24,6 +24,7 @@
   font-size: 10px;
   letter-spacing: 2px;
   padding: 30px;
+  padding-top: 10px;
   position: absolute;
   right: 40%;
   left: 35%;
@@ -37,7 +38,7 @@
   background-color: rgb(233,252,227);
   width: 90%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-top: 20px;
   font-family: 'Museo Sans';
   font-weight: 500;
   letter-spacing: 2px;
@@ -75,4 +76,10 @@
   width: 100%;
   padding: 10px;
   border: none;
+  margin-top: 10px;
+}
+
+.error{
+  color: rgb(227,102,109);
+  margin-top: 2px;
 }
