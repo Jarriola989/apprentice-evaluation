@@ -83,3 +83,17 @@
   color: rgb(227,102,109);
   margin-top: 2px;
 }
+
+.submitted{
+  height: 500px;
+}
+
+.submitted p{
+  position: absolute;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  top: 50%;
+  bottom: 0;
+  font-size: 20px;
+}

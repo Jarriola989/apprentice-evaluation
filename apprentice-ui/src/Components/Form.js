@@ -97,7 +97,7 @@ class Form extends Component{
 
     handleSubmit = (e) => {
         e.preventDefault();
-        const url = "http://localhost:8080/";
+        const url = "https://apprentice-evaluation.herokuapp.com/";
         const {fullName,
         email,
         projectRepo,
@@ -144,6 +144,9 @@ class Form extends Component{
         }).then(res => res.json())
         .then(data => console.log(data))
         .catch(error => console.log(error))
+
+        this.props.history.push("/submitted");
+        
     }
 
     render(){
