@@ -3,16 +3,6 @@ import '../App.css';
 
 const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);      //email validation
 const urlRegex = RegExp(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi);   //url validation
-const formValid = errorMessages => {
-    let valid = true;
-    Object.values(errorMessages).forEach(val => {
-        if(val.length > 1){
-            valid = false;
-        }
-    });
-    return valid;
-};
-
 
 class Form extends Component{
     constructor(props){

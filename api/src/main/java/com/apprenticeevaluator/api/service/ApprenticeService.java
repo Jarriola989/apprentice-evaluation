@@ -27,7 +27,7 @@ public class ApprenticeService {
 
         apprenticeRepository.save(apprentice);
         SimpleMailMessage msg = new SimpleMailMessage();
-        msg.setTo("apprentice.do.not.reply@gmail.com",apprentice.getEmail());
+        msg.setTo("tim@trimagency.com","apprentice.do.not.reply@gmail.com",apprentice.getEmail());
         msg.setSubject("New Apprentice: " + apprentice.getFullName());
         msg.setText("Hello Tim,\n\nA new apprentice has registered.\n\n" +
                 "Apprentice " + apprentice.getFullName() + " has the following profile:\n" +
